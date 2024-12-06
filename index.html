@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travellian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="Hero">
+        <header>
+            
+            <a href="/" class="header-logo">
+            <svg  width="41" height="46" viewBox="0 0 41 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo1">
+                <path d="M14.443 33.2473L20.3596 39.08L26.2762 33.2473L20.3596 27.4147L14.443 33.2473ZM20.3596 4.94084V4.94961C18.6662 4.94961 16.9728 5.58696 15.6827 6.85873L15.6768 6.85289C14.3896 8.12466 13.7431 9.79697 13.7431 11.4693C13.7431 13.1445 14.3867 14.8139 15.6708 16.0798H15.6797L20.3596 20.6904L25.0366 16.0798H25.0455C26.3385 14.8051 26.985 13.1357 26.985 11.4693H26.9761C26.9761 9.7999 26.3296 8.13051 25.0395 6.85873C23.7405 5.58111 22.0471 4.94084 20.3596 4.94084ZM29.6868 36.6095L22.0649 44.1232L20.3596 45.8043L18.6543 44.1232L11.0325 36.6095L3.41057 44.1232L0 40.761L16.952 24.0526L12.2751 19.442L12.281 19.4362C10.0419 17.2317 8.92383 14.3461 8.92383 11.4693C8.92383 8.58952 10.0419 5.70683 12.2751 3.50534V3.49949C14.5083 1.29801 17.4354 0.195801 20.3596 0.195801V0.204572C23.2898 0.204572 26.2199 1.30385 28.4471 3.49949C30.6803 5.70098 31.7954 8.58659 31.7954 11.4722H31.7865C31.7865 14.3549 30.6714 17.2376 28.4412 19.4391L28.4471 19.4449L23.7702 24.0526L40.7193 40.761L37.3087 44.1232L29.6868 36.6095Z" fill="white"/>
+                </svg>
+                <svg width="187" height="35" viewBox="0 0 187 35" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" class="name1">
+                    <path d="M13.5641 6.2979V33.1589H8.50436V6.2979H0.234375V1.99844H21.7916V6.2979H13.5641Z" fill="white"/>
+                    <path d="M26.3199 16.1952C26.816 14.8614 27.4679 13.8752 28.2758 13.2366C29.0978 12.5981 30.1112 12.2788 31.3159 12.2788C31.9679 12.2788 32.6057 12.3569 33.2293 12.513C33.8671 12.6691 34.4907 12.8961 35.1001 13.1941L33.4419 17.1104C33.045 16.8266 32.6128 16.6209 32.145 16.4932C31.6915 16.3513 31.1813 16.2803 30.6144 16.2803C29.0837 16.2803 27.9853 16.8976 27.3191 18.1321C26.653 19.3524 26.3199 21.4099 26.3199 24.3046V33.1589H21.7066V12.9387H26.3199V16.1952Z" fill="white"/>
+                    <path d="M56.6999 33.1589H52.0866V30.5409C51.2645 31.7045 50.3008 32.5701 49.1953 33.1376C48.1039 33.7052 46.8496 33.989 45.4323 33.989C42.5835 33.989 40.3371 33.017 38.693 31.073C37.0631 29.1149 36.2481 26.4401 36.2481 23.0488C36.2481 19.8277 37.0844 17.231 38.7568 15.2587C40.4292 13.2721 42.6119 12.2788 45.3047 12.2788C46.9488 12.2788 48.352 12.6265 49.5141 13.3218C50.6905 14.0029 51.548 14.9891 52.0866 16.2803V12.9812H56.6999V33.1589ZM52.2141 23.0062C52.2141 20.9203 51.7251 19.2956 50.7472 18.1321C49.7834 16.9685 48.4299 16.3868 46.6866 16.3868C44.9433 16.3868 43.5685 16.9898 42.5623 18.1959C41.5701 19.3879 41.0741 21.0481 41.0741 23.1765C41.0741 25.3191 41.556 26.9722 42.5197 28.1358C43.4835 29.2993 44.8441 29.8811 46.6016 29.8811C48.2598 29.8811 49.6063 29.2497 50.6409 27.9868C51.6897 26.7239 52.2141 25.0637 52.2141 23.0062Z" fill="white"/>
+                    <path d="M70.1572 34.3721L59.5912 12.9812H64.6297L69.0305 23.1339C69.1722 23.4461 69.3423 23.9144 69.5407 24.5387C69.7391 25.1631 69.9446 25.908 70.1572 26.7736C70.299 26.1634 70.4619 25.5604 70.6462 24.9644C70.8446 24.3542 71.0785 23.7441 71.3478 23.1339L75.7272 12.9812H80.7445L70.1572 34.3721Z" fill="white"/>
+                    <path d="M103.067 23.7512H86.9523C87.0657 25.6384 87.6255 27.1141 88.6318 28.1784C89.6381 29.2284 90.9775 29.7534 92.6499 29.7534C94.1381 29.7534 95.3782 29.4412 96.3703 28.8169C97.3624 28.1925 98.227 27.1851 98.964 25.7945L102.854 27.9655C101.721 29.9946 100.318 31.5058 98.6451 32.4991C96.9727 33.4924 95.0097 33.989 92.7562 33.989C89.5247 33.989 86.9523 33.0028 85.0389 31.0305C83.1256 29.0581 82.1689 26.4259 82.1689 23.1339C82.1689 19.9696 83.1539 17.3729 85.124 15.3438C87.1082 13.3005 89.6523 12.2788 92.7562 12.2788C96.0018 12.2788 98.5317 13.2083 100.346 15.0671C102.16 16.926 103.067 19.5298 103.067 22.8785V23.7512ZM98.2837 20.6437C98.0994 19.1963 97.5467 18.0966 96.6254 17.3446C95.7042 16.5783 94.4428 16.1952 92.8412 16.1952C91.3247 16.1952 90.1058 16.5641 89.1846 17.302C88.2633 18.0398 87.6184 19.1537 87.2499 20.6437H98.2837Z" fill="white"/>
+                    <path d="M108.106 33.1589V0.167969H112.719V33.1589H108.106Z" fill="white"/>
+                    <path d="M119.543 33.1589V0.167969H124.157V33.1589H119.543Z" fill="white"/>
+                    <path d="M130.364 4.25459C130.364 3.47416 130.648 2.80015 131.215 2.23256C131.796 1.66498 132.483 1.38118 133.277 1.38118C134.099 1.38118 134.779 1.65788 135.318 2.21128C135.871 2.75049 136.147 3.43159 136.147 4.25459C136.147 5.07759 135.871 5.77288 135.318 6.34047C134.765 6.89387 134.085 7.17057 133.277 7.17057C132.483 7.17057 131.796 6.88677 131.215 6.31919C130.648 5.73741 130.364 5.04921 130.364 4.25459ZM130.981 33.1589V12.9812H135.594V33.1589H130.981Z" fill="white"/>
+                    <path d="M161.17 33.1589H156.556V30.5409C155.734 31.7045 154.77 32.5701 153.665 33.1376C152.574 33.7052 151.319 33.989 149.902 33.989C147.053 33.989 144.807 33.017 143.163 31.073C141.533 29.1149 140.718 26.4401 140.718 23.0488C140.718 19.8277 141.554 17.231 143.227 15.2587C144.899 13.2721 147.082 12.2788 149.774 12.2788C151.419 12.2788 152.822 12.6265 153.984 13.3218C155.16 14.0029 156.018 14.9891 156.556 16.2803V12.9812H161.17V33.1589ZM156.684 23.0062C156.684 20.9203 156.195 19.2956 155.217 18.1321C154.253 16.9685 152.9 16.3868 151.156 16.3868C149.413 16.3868 148.038 16.9898 147.032 18.1959C146.04 19.3879 145.544 21.0481 145.544 23.1765C145.544 25.3191 146.026 26.9722 146.989 28.1358C147.953 29.2993 149.314 29.8811 151.071 29.8811C152.73 29.8811 154.076 29.2497 155.111 27.9868C156.159 26.7239 156.684 25.0637 156.684 23.0062Z" fill="white"/>
+                    <path d="M167.547 33.1589V12.9812H171.884V16.2803C172.806 14.8897 173.89 13.8752 175.137 13.2366C176.384 12.5981 177.901 12.2788 179.687 12.2788C181.189 12.2788 182.465 12.5201 183.513 13.0025C184.576 13.4708 185.406 14.1732 186.001 15.1097C186.355 15.6631 186.61 16.3087 186.766 17.0466C186.922 17.7844 187 19.0757 187 20.9203V33.1589H182.344V22.7934C182.344 20.1399 182.018 18.3804 181.366 17.5148C180.728 16.6351 179.588 16.1952 177.943 16.1952C176.866 16.1952 175.903 16.3938 175.052 16.7912C174.216 17.1885 173.557 17.749 173.075 18.4726C172.735 18.9551 172.494 19.5794 172.352 20.3457C172.225 21.0977 172.161 22.3038 172.161 23.964V33.1589H167.547Z" fill="white"/>
+                    </svg>
+                </a>
+                <nav>
+                    <ul class="header-menu-list" class="header-menu-list-mobile">
+                        <li><a href="/" class="header-menu-link">Home</a></li>
+                        <li><a href="/" class="header-menu-link">Explore</a></li>
+                        <li><a href="/" class="header-menu-link">Travel</a></li>
+                        <li><a href="/" class="header-menu-link">Blog</a></li>
+                        <li><a href="/" class="header-menu-link">Pricing</a></li>
+                    </ul>
+                    <div class="nav-btn">
+                        <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.29167 2.58333C0.716375 2.58333 0.25 2.11696 0.25 1.54167C0.25 0.966375 0.716375 0.5 1.29167 0.5H36.7083C37.2835 0.5 37.75 0.966375 37.75 1.54167C37.75 2.11696 37.2835 2.58333 36.7083 2.58333H1.29167ZM1.29167 13C0.716375 13 0.25 12.5335 0.25 11.9583C0.25 11.3831 0.716375 10.9167 1.29167 10.9167H36.7083C37.2835 10.9167 37.75 11.3831 37.75 11.9583C37.75 12.5335 37.2835 13 36.7083 13H1.29167ZM1.29167 23.4167C0.716375 23.4167 0.25 22.9502 0.25 22.375C0.25 21.7998 0.716375 21.3333 1.29167 21.3333H36.7083C37.2835 21.3333 37.75 21.7998 37.75 22.375C37.75 22.9502 37.2835 23.4167 36.7083 23.4167H1.29167Z" fill="white"/>
+                            </svg>                            
+                    </div>
+                    <div class="cross">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" height="38px" width="24px" version="1.1" id="Capa_1" viewBox="0 0 490 490" xml:space="preserve">
+                            <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490   489.292,457.678 277.331,245.004 489.292,32.337 "/>
+                            </svg>
+                    </div>
+                </nav>
+                <div class="header-actions" class="header-actions-mobile">
+                    <span class="Login">Login</span>
+                    <button class="header-button button">Sign up</button>
+                </div>
+                   
+        </header>
+        
+            <section class="Title">
+                <div class="title">
+                    <h3 class="banner">
+                        Start your unforgettable <br>journey with us.</br>
+                    </h3>
+                </div>
+                <div class="subtitle">
+                    The best travel for your jouney begins now
+                </div>
+            </section>
+            <div class="slider">
+                <ul class="slider-list">
+                    <li class="slider-element"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" fill="white"/>
+                        </svg>
+                        </li>
+                    <li class="slider-element"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" fill="white"/>
+                        </svg>
+                        </li>
+                    <li class="slider-element"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" fill="white"/>
+                        </svg>
+                        </li>
+                    <li class="slider-element"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" fill="white"/>
+                        </svg>
+                        </li>
+                    <li class="slider-element"><svg  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                        <circle cx="8" cy="8" r="8" fill="white"/>
+                        </svg>
+                        </li>
+                </ul>
+                <div class="slider-scroll">
+                    <ul class="scroll-list">
+                     <li class="scroll-element"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 7L8 0.999999L1 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+                    <li class="scroll-element"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8 7L15 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </li>
+                        </ul>                  
+                </div>
+            </div>
+            <section class="Booking">
+                <div class="Book-container">
+            <ul class="Book-list">
+                
+                <li class="Book-list-element"> <label for="destination">Destination</label> <input type="text" id="destination"></li>
+                <li class="Book-list-element"><label for="person">Person</label> <select name="person" id="person">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select></li>
+                <li class="Book-list-element"><label for="Check-in">Check in</label><input type="date"></li>
+                <li class="Book-list-element"><label for="Check-out">Check out</label><input type="date"></li>
+            </ul>
+            </div>
+            <div class="Book">
+                <Button class="Book-Now">
+                    Book <br class="break-line">Now
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="30" height="30"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                </Button>
+            </div>
+            </section>
+        
+    </div>
+    <div class="Destination">
+        <div class="destination-title">
+            <div class="title-block">
+         <h3 class="second-title">
+            Popular Destinations
+         </h3>
+         <div class="under-title">
+            Most popular destinations around the world, from historical places to natural wonders.
+            </div>
+         </div>
+         <div class="destination-scroll-buttons">
+             <button class="destination-left">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+             </button>
+             <button class="destination-right">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-180 6 11)" />
+                    </svg>
+                    
+             </button>
+         </div>
+        </div>
+        <section class="Places">
+            <ul class="content-places">
+                 <li class="place-card Berlin" >
+                    <div class="place-name">
+                        Monument of Berlin
+                    </div>
+                    <div class="place-location">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z" fill="white"/>
+                            <path d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z" fill="white"/>
+                            </svg>         
+                            Berlin, Germany                   
+                    </div>
+                 </li>
+                 <li class="place-card London" >
+                    <div class="place-name">
+                        Millennium Bridge
+                    </div>
+                    <div class="place-location">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z" fill="white"/>
+                            <path d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z" fill="white"/>
+                            </svg>         
+                            London, United Kingdom
+                 </li>
+                 <li class="place-card Venice" >
+                    <div class="place-name">
+                        Rialto Bridge
+                    </div>
+                    <div class="place-location">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z" fill="white"/>
+                            <path d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z" fill="white"/>
+                            </svg>         
+                            Venice, Italy
+                 </li>
+                 <li class="place-card Lisabon">
+                    <div class="place-name">
+                        Sea of Orange Tiles
+                    </div>
+                    <div class="place-location">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z" fill="white"/>
+                            <path d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z" fill="white"/>
+                            </svg>         
+                            Lisbon, Portugal
+                 </li>
+                 <li class="place-card Paris" >
+                    <div class="place-name">
+                        Eiffel Tower
+                    </div>
+                    <div class="place-location">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z" fill="white"/>
+                            <path d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z" fill="white"/>
+                            </svg>         
+                            Paris, France
+                 </li>
+            </ul>
+        </section>
+    </div>
+    <section class="Special-Offers">
+        
+          <div class="Special-offer-title">
+            <div class="Special-scroll-buttons">
+                <button class="special-left">
+                   <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                       </svg>
+                       
+                </button>
+                <button class="special-right">
+                   <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M11 1L1 11L11 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-180 6 11)" />
+                       </svg>
+                </button>
+            </div>
+            <div class="Special-offer-banner">
+              <h3 class="Special-offer-main">
+                Special Offer
+              </h3>
+              <div class="Special-under-title">
+                Check out our special offer and discounts
+              </div>
+            </div>
+          </div>
+
+          <div class="Offers">
+              <ul class="Offers-list">
+                <li class="Offer-card">
+                    <div class="Image-Container Portugal">
+                         
+                    </div>
+                    <div class="Offer-Description">
+                           <div class="rating">
+                            Lisbon, Portugal
+                           
+                           <ul class="stars">
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                           </ul>
+                        </div>
+                        <div class="card-description">
+                            5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.
+                        </div>
+                        <div class="Price-Details">
+                                <div class="Price">
+                                    <div class="From">
+                                     From
+                                    </div>
+                                    <div class="Euro">
+                                        €500
+                                    </div>
+                                </div>
+                                <button class="Detalis">
+                                    DETAILS
+                                </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="Offer-card">
+                    <div class="Image-Container Greece">
+                         
+                    </div>
+                    <div class="Offer-Description">
+                           <div class="rating">
+                            Athens, Greece
+                           
+                           <ul class="stars">
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                           </ul>
+                        </div>
+                        <div class="card-description">
+                            5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.
+                        </div>
+                        <div class="Price-Details">
+                                <div class="Price">
+                                    <div class="From">
+                                     From
+                                    </div>
+                                    <div class="Euro">
+                                        €800
+                                    </div>
+                                </div>
+                                <button class="Detalis">
+                                    DETAILS
+                                </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="Offer-card">
+                    <div class="Image-Container Italy">
+                         
+                    </div>
+                    <div class="Offer-Description">
+                           <div class="rating">
+                            Rome, Italy
+                           
+                           <ul class="stars">
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 6.10352e-05L13.09 6.26006L20 7.27006L15 12.1401L16.18 19.0201L10 15.7701L3.82 19.0201L5 12.1401L0 7.27006L6.91 6.26006L10 6.10352e-05Z" fill="#FFC107"/>
+                                    </svg>
+                                    </li>
+                           </ul>
+                        </div>
+                        <div class="card-description">
+                            5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.
+                        </div>
+                        <div class="Price-Details">
+                                <div class="Price">
+                                    <div class="From">
+                                     From
+                                    </div>
+                                    <div class="Euro">
+                                        €750
+                                    </div>
+                                </div>
+                                <button class="Detalis">
+                                    DETAILS
+                                </button>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+          </div>
+    </section>
+    <section class="Blog">
+          <div class="Blog-Banner">
+              <h3 class="Blog-Title">
+                Our Blog
+              </h3>
+              <div class="Blog-Subtitle">
+                An insight the incredible experience in the world
+              </div>
+          </div>
+          <div class="Blog-Content">
+             <div class="Blog-Image">
+
+                </div>
+
+             <div class="Blog-Container">
+              <h4 class="Blog-Container-Title">
+                Beautiful Italy <br> Let’s travel
+              </h4>
+              <div class="Blog-Container-description">
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness. No one rejects, dislike, or avoids plasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremly painful. Nor again is there anyone who loves or pursues.
+              </div>
+              <div class="Drop-down">
+                <span id="toogleButton">Read More</span>
+              </div>
+              <div id="DropText" class="hidden-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing 
+              </div>
+             </div>
+          </div>
+    </section>
+    <section class="Trip-Planners">
+        <div class="Trip-banner">
+           <h3 class="Trip-Title">
+            Trip Planners
+           </h3>
+           <div class="Trip-subtitle">
+            20 years from now you will be more disappointed by the things that you didn’t do. Stop regretting and start travelling, start throwing off the bowlines.
+
+           </div>
+        
+           <div class="All-trip"> 
+            <div class="Kub">
+                 
+            </div>
+              
+              <Button class="Trip-Button">
+                View all trip plans
+              </Button>
+              <div class="Kubi">
+                   
+              </div>
+           </div>
+        </div>
+           <div class="Trip-Content">
+            <ul class="Trip-list">
+               <li class="Trip-list-element">
+                <div class="Trip-Image Rome">
+                   
+                </div>
+                <div class="Under-Image rome">
+                    <div class="Price-Trip">
+                        <span class="PTa">
+                            GUIDED TOUR
+                        </span>
+                        <span class="Day">
+                            €99/Day
+                        </span>
+                    </div>
+                    <div class="name-Trip">
+                        Rome City Tour
+                    </div>
+                    <div class="rating-trip">
+                        <ul class="stars-trip">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                        </ul>
+                        <div class="far">
+                            7 Days tour
+                        </div>
+                    </div>
+               </div>
+               </li>
+               <li class="Trip-list-element">
+                <div class="Trip-Image Pariss">
+                   
+                </div>
+               <div class="Under-Image paris">
+                    <div class="Price-Trip">
+                        <span class="PTa">
+                            GUIDED TOUR
+                        </span>
+                        <span class="Day">
+                            €99/Day
+                        </span>
+                    </div>
+                    <div class="name-Trip">
+                        Paris City Tour
+                    </div>
+                    <div class="rating-trip">
+                        <ul class="stars-trip">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                        </ul>
+                        <div class="far">
+                            7 Days tour
+                        </div>
+                    </div>
+               </div>
+               </li>
+               <li class="Trip-list-element">
+                <div class="Trip-Image Prague">
+                   
+                </div>
+                <div class="Under-Image prague">
+                    <div class="Price-Trip">
+                        <span class="PTa">
+                            GUIDED TOUR
+                        </span>
+                        <span class="Day">
+                            €99/Day
+                        </span>
+                    </div>
+                    <div class="name-Trip">
+                        Prague City Tour
+                    </div>
+                    <div class="rating-trip">
+                        <ul class="stars-trip">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                        </ul>
+                        <div class="far">
+                            10 Days tour
+                        </div>
+                    </div>
+               </div>
+               </li>
+               <li class="Trip-list-element">
+                <div class="Trip-Image Buda">
+                   
+                </div>
+                <div class="Under-Image buda">
+                    <div class="Price-Trip">
+                        <span class="PTa">
+                            GUIDED TOUR
+                        </span>
+                        <span class="Day">
+                            €99/Day
+                        </span>
+                    </div>
+                    <div class="name-Trip">
+                        Buda City Tour
+                    </div>
+                    <div class="rating-trip">
+                        <ul class="stars-trip">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="#FFC107"/>
+                                </svg>
+                                </li>
+                        </ul>
+                        <div class="far">
+                            7 Days tour
+                        </div>
+                    </div>
+               </div>
+               </li>
+            </ul>
+           </div>
+    </section>
+    <script src="./js.js"></script>
+
+</body>
+</html>

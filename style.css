@@ -1235,6 +1235,169 @@ color: #767E86;
   transition: ease-in-out 0.5s;
   cursor: pointer;
 }
+.reacts{
+  width: 100%;
+  height: 1238px;
+}
+.reacts-title{
+  width: 1556px;
+  height: 165px;
+  margin: 140px 182px 0px 182px;
+}
+.react-banner{
+  width: 100%;
+  height: 105px;
+  font-family: Playfair Display;
+font-size: 64px;
+font-weight: 400;
+line-height: 85.31px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #172432;
+position: relative;
+}
+.react-banner::before{
+  content: '';
+  position: absolute;
+  width: 347px;
+  left: 0;
+  height: 3px;
+  background-color: #FF7757;
+  bottom: -10px;
+}
+.react-under-title{
+  width: 100%;
+  height: 28px;
+  font-family: Rubik;
+font-size: 24px;
+font-weight: 400;
+line-height: 28.44px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-top: 32px;
+color: #767E86;
+}
+.react-list{
+  width: 100%;
+  height: 313px;
+  margin: 160px 0px 0px 182px;
+  display: flex;
+  justify-content: space-between;
+  transition-duration: 0.5s;
+
+}
+.react-list-element{
+  width: 663px;
+  height: 313px;
+  position: relative;
+  background-color: #F5F6F7;
+  border-radius: 12px;
+}
+.avatar{
+  position: absolute;
+  left: 40px;
+  top: -65px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.react-text{
+  width: 583px;
+  height: 92px;
+  margin: 60px 40px 0px 40px;
+  font-family: Rubik;
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #767E86;
+}
+.react-rating{
+  width: 136px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.nickname{
+  font-family: Playfair Display;
+font-size: 24px;
+font-weight: 400;
+line-height: 31.99px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #767E86;
+margin-left: 40px;
+}
+.speciality{
+  font-family: Rubik;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.33px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #767E86;
+margin-left: 40px;
+}
+.a1{
+  background-image: url(./images/dido.png);
+  background-position: center;
+  background-size: cover;
+}
+.a2{
+  background-image: url(./images/dido2.png);
+  background-position: center;
+  background-size: cover;
+}
+.a3{
+  background-image: url(./images/babo.png);
+  background-position: center;
+  background-size: cover;
+}
+.React-Buttons{
+  width: 172px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 160px;
+  margin-right: 182px;
+  float: right;
+}
+.react-left{
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: #172432;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+.react-left:hover{
+  background-color: #FF7757;
+  transition-duration: 0.5s;
+}
+.react-right{
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: #172432;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+.react-right:hover{
+  background-color: #FF7757;
+  transition-duration: 0.5s;
+}
 
 
 
@@ -2082,6 +2245,70 @@ text-decoration-skip-ink: none;
   .Gallery-element:hover{
     margin: 0;
   }
+  .reacts{
+    width: 100%;
+    height: 1108px;
+  }
+  .reacts-title{
+    width: 288px;
+    height: 222px;
+    margin: 80px 16px 0px 16px;
+  }
+  .react-banner{
+    width: 288px;
+    height: 128px;
+    font-size: 48px;
+    position: relative;
+    line-height: 64px;
+  }
+  .react-banner::before{
+    content: '';
+    position: absolute;
+    width: 288px;
+    height: 3px;
+    left: 0;
+    bottom: -20px;
+  }
+  .react-under-banner{
+    width: 288px;
+    height: 42px;
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 21.33px;
+  }
+  .react-list{
+    width: 288px;
+    height: 466px;
+    margin-left: 0px;
+  }
+  .react-list-element{
+    width: 288px;
+    height: 466px;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .avatar{
+    position: absolute;
+    left: 20px;
+  }
+  .react-text{
+    width: 248px;
+    height: 253px;
+    margin: 60px 20px 0px 20px;
+  }
+  .react-rating{
+    margin-left: 20px;
+  }
+  .nickname{
+    margin-left: 20px;
+  }
+  .speciality{
+    margin-left: 20px;
+}
+.React-Buttons{
+  margin: 100px 74px 0px 74px;
 }
 
+}
 

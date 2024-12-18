@@ -166,3 +166,55 @@ function addEventListenersIfLargeScreen() {
 addEventListenersIfLargeScreen();
 
 
+const contentPlaces = document.querySelector('.react-list');
+const allPlaceCards = Array.from(document.querySelectorAll('.react-list-element'));
+const leftArrowButton = document.querySelector('.react-left');
+const rightArrowButton = document.querySelector('.react-right');
+
+let visibleCards = [];
+let activeCardIndex = 0;
+
+function calculateSlideFullWidth(slide) {
+    const slideStyle = getComputedStyle(slide); 
+    const marginLeft = parseFloat(slideStyle.marginLeft); 
+    const marginRight = parseFloat(slideStyle.marginRight); 
+    return slide.clientWidth + marginLeft + marginRight; 
+}
+
+function updateVisibleSlides() {
+    console.log("Window width: ", window.innerWidth); 
+    if (window.innerWidth > 1900) {
+        visibleCards = allPlaceCards.slice(0, 2);
+    } else if (window.innerWidth < 350) {
+        visibleCards = allPlaceCards.slice(0, 3);
+    } else {
+        visibleCards = allPlaceCards.slice(0, 3); 
+    }
+    console.log("Number of slides: ", visibleCards.length);  
+    activeCardIndex = Math.min(activeCardIndex, visibleCards.length - 1); 
+    refreshSliderPosition();
+}
+
+function refreshSliderPosition() {
+    if (visibleCards.length === 0) return; 
+    const slideWidth = calculateSlideFullWidth(visibleCards[0]); 
+    contentPlaces.style.transform = `translateX(-${activeCardIndex * slideWidth}px)`; 
+}
+
+leftArrowButton.addEventListener('click', () => {
+    activeCardIndex = (activeCardIndex > 0) ? activeCardIndex - 1 : visibleCards.length - 1;
+    refreshSliderPosition();
+});
+
+rightArrowButton.addEventListener('click', () => {
+    activeCardIndex = (activeCardIndex < visibleCards.length - 1) ? activeCardIndex + 1 : 0;
+    refreshSliderPosition();
+});
+
+window.addEventListener('load', updateVisibleSlides);  
+window.addEventListener('resize', updateVisibleSlides); 
+
+updateVisibleSlides();
+
+
+

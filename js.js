@@ -166,15 +166,3 @@ function addEventListenersIfLargeScreen() {
 addEventListenersIfLargeScreen();
 
 
-window.addEventListener('resize', () => {
-
-  if (window.innerWidth < 1900) {
-
-    Trip.forEach((trip) => {
-      const clonedTrip = trip.cloneNode(true);
-      trip.replaceWith(clonedTrip); 
-    });
-  } else {
-    addEventListenersIfLargeScreen(); 
-  }
-});

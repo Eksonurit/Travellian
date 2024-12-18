@@ -1111,7 +1111,130 @@ text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #172432;
 }
-
+.Gallery{
+  width: 100%;
+  height: 1190px;
+}
+.Gallery-Title{
+  width: 1556px;
+  height: 165px;
+  display: flex;
+  justify-content: space-between;
+  margin: 140px 182px 0px 182px;
+  position: relative;
+}
+.Gallery-main{
+  width: 1352px;
+  height: 165px;
+}
+.Gallery-banner{
+  width: 100%;
+  height: 85px;
+  font-family: Playfair Display;
+font-size: 64px;
+font-weight: 400;
+line-height: 85.31px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #172432;
+position: relative;
+}
+.Gallery-banner::before{
+  content: '';
+  position: absolute;
+  width: 283px;
+  height: 3px;
+  left: 0px;
+  bottom: -20px;
+  background-color: #FF7757
+}
+.Gallery-Under{
+  width: 100%;
+  height: 28px;
+  margin-top: 32px;
+  font-family: Rubik;
+font-size: 24px;
+font-weight: 400;
+line-height: 28.44px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #767E86;
+}
+.Gallery-Buttons{
+  width: 172px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 105px;
+}
+.gallery-left{
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: #172432;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+.gallery-left:hover{
+  background-color: #FF7757;
+  transition-duration: 0.5s;
+}
+.gallery-right{
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: #172432;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+.gallery-right:hover{
+  background-color: #FF7757;
+  transition-duration: 0.5s;
+}
+.Gallery-Content{
+  width: 1556px;
+  height: 645px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 182px 0px 182px;
+}
+.Gallery-element{
+  width: 365px;
+  height: 570px;
+  border-radius: 26px;
+}
+.photo1{
+  background-image: linear-gradient(#FF77571A, #FF77571A), url(./images/photo1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.photo2{
+  background-image: linear-gradient(#FF77571A, #FF77571A), url(./images/photo2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.photo3{
+  background-image: linear-gradient(#FF77571A, #FF77571A), url(./images/photo3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.photo4{
+  background-image: linear-gradient(#FF77571A, #FF77571A), url(./images/photo4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.Gallery-element:hover{
+  margin-bottom: 75px;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+}
 
 
 
@@ -1891,8 +2014,74 @@ color: #767E86;
     display: flex;
     justify-content: space-between;
   }
+  .Gallery{
+    width: 320px;
+    height: 1975px;
 
+  }
+  .Gallery-Buttons{
+    position: absolute;
+    bottom: -1650px;
+    margin: 0px;
+    left: 50px;
+  }
+  .Gallery-Title{
+    width: 288px;
+    height: 179px;
+    margin: 80px 16px 0px 16px;
+  }
+  .Gallery-main{
+    width: 288px;
+    height: 179px;
+    margin: 80px 16px 0px 16px;
+  }
+  .Gallery-banner{
+    width: 288px;
+    height: 106px;
+    font-family: Playfair Display;
+font-size: 40px;
+font-weight: 400;
+line-height: 53.32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+position: relative;
+  }
+  .Gallery-banner::before{
+    content: '';
+    position: absolute;
+    width: 288px;
+    height: 3px;
+    background-color: #FF7757;
+    bottom: -20px;
+  }
+  .Gallery-Under{
+    width: 288px;
+    height: 21px;
+    margin-top: 32px;
+    font-family: Rubik;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.33px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+  }
+  
+  .Gallery-Content{
+    width: 288px;
+    height: 1376px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 16px 0px 16px;
+  }
+  .Gallery-element{
+    width: 288px;
+    height: 320px;
+  }
+  .Gallery-element:hover{
+    margin: 0;
+  }
 }
-
 
 
